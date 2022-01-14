@@ -1,3 +1,4 @@
+import django_filters
 from rest_framework import serializers
 
 from logistic.models import Product, Stock, StockProduct
@@ -60,8 +61,10 @@ class StockSerializer(serializers.ModelSerializer):
             StockProduct.objects.update_or_create(
                 stock=stock,
                 product=position.get('product'),
-                quantity=position.get('quantity'),
-                price=position.get('price')
+                defaults={
+                    'quantity': position.get('quantity'),
+                    'price': position.get('price'),
+                }
             )
 
         return stock
