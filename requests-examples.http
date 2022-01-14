@@ -23,6 +23,17 @@ Content-Type: application/json
 
 ###
 
+###
+
+POST {{baseUrl}}/products/
+Content-Type: application/json
+
+{
+  "title": "Бананы",
+  "description": "Сладкие и спелые"
+}
+
+
 POST {{baseUrl}}/products/
 Content-Type: application/json
 
@@ -66,7 +77,7 @@ POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
+  "address": "мой адрес5 не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
   "positions": [
     {
       "product": 2,
@@ -84,7 +95,7 @@ Content-Type: application/json
 ###
 
 # обновляем записи на складе
-PATCH {{baseUrl}}/stocks/1/
+PATCH {{baseUrl}}/stocks/5/
 Content-Type: application/json
 
 {
